@@ -1,5 +1,8 @@
 import { useState } from "react";
 
+import { Button, Grid, TextField } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+
 export const AddCategory = ({ onNewCategory }) => {
   const [inputValue, setInputValue] = useState("");
 
@@ -17,12 +20,26 @@ export const AddCategory = ({ onNewCategory }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Buscar gifs"
-        value={inputValue}
-        onChange={handleChange}
-      />
+      <Grid container>
+        <Grid item xs={12}>
+          <TextField
+            sx={{ width: "100%" }}
+            label="Buscar Gifs"
+            value={inputValue}
+            onChange={handleChange}
+          />
+        </Grid>
+        <Grid item xs={12}>
+          <Button
+            sx={{ width: "100%" }}
+            variant="contained"
+            endIcon={<SearchIcon />}
+            type="submit"
+          >
+            Buscar
+          </Button>
+        </Grid>
+      </Grid>
     </form>
   );
 };

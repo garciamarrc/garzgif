@@ -1,10 +1,15 @@
+import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import React from "react";
 
 export const GifItem = ({ title, url }) => {
   return (
-    <div className="card">
-      <img src={url} alt={title} />
-      <p>{title}</p>
-    </div>
+    <Card sx={{ margin: 2, heigth: "auto" }}>
+      <CardMedia component="img" image={url} alt={title} />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {title}
+        </Typography>
+      </CardContent>
+    </Card>
   );
 };
