@@ -1,5 +1,8 @@
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import React from "react";
+
+import PropTypes from "prop-types";
+
+import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
 export const GifItem = ({ title, url }) => {
   return (
@@ -12,4 +15,9 @@ export const GifItem = ({ title, url }) => {
       </CardContent>
     </Card>
   );
+};
+
+GifItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
 };
