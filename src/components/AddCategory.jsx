@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { PropTypes } from "prop-types";
+
 import { Button, Grid, TextField } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
@@ -42,4 +44,8 @@ export const AddCategory = ({ onNewCategory }) => {
       </Grid>
     </form>
   );
+};
+
+AddCategory.propTypes = {
+  onNewCategory: PropTypes.func.isRequired,
 };
