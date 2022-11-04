@@ -21,7 +21,7 @@ export const AddCategory = ({ onNewCategory }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} aria-label="form">
       <Grid container>
         <Grid item xs={12}>
           <TextField
