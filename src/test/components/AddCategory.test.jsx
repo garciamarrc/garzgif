@@ -10,5 +10,7 @@ describe("Pruebas en <AddCategory />", () => {
     fireEvent.input(input, { target: { value: "Search" } });
 
     expect(input.value).toBe("Search");
+
+    screen.debug();
   });
 });
